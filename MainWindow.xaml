@@ -21,27 +21,28 @@
             <RowDefinition Height="75*"/>
             <RowDefinition Height="75*"/>
             <RowDefinition Height="75*"/>
+
         </Grid.RowDefinitions>
         <TextBox Grid.ColumnSpan="4" FontSize="18" TextAlignment="Right" IsEnabled="False" Name="TBTop"/>
         <TextBox Grid.Row="1" Grid.ColumnSpan="4" FontSize="40" TextAlignment="Right" IsEnabled="False" Name ="TBBottom"/>
-        <Button  Grid.Row="2" Grid.Column="0" FontSize="18" Content="CE" Margin="3"/>
-        <Button  Grid.Row="2" Grid.Column="1" FontSize="18" Content="C" Margin="3"/>
-        <Button  Grid.Row="2" Grid.Column="2" FontSize="18" Content= "&lt;" Margin="3"/>
-        <Button  Grid.Row="2" Grid.Column="3" FontSize="25" Content="/" Margin="3"/>
+        <Button  Grid.Row="2" Grid.Column="0" FontSize="18" Content="CE" Margin="3" Click="ButtonCEClick"/>
+        <Button  Grid.Row="2" Grid.Column="1" FontSize="18" Content="C" Margin="3" Click="ButtonCClick"/>
+        <Button  Grid.Row="2" Grid.Column="2" FontSize="18" Content= "&lt;" Margin="3" Click ="ButtonBackClick"/>
+        <Button  Grid.Row="2" Grid.Column="3" FontSize="25" Content="/" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="3" Grid.Column="0" FontSize="18" Content="7" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="3" Grid.Column="1" FontSize="18" Content="8" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="3" Grid.Column="2" FontSize="18" Content="9" Margin="3" Click="ButtonNumberClick"/>
-        <Button  Grid.Row="3" Grid.Column="3" FontSize="25" Content="*" Margin="3"/>
+        <Button  Grid.Row="3" Grid.Column="3" FontSize="25" Content="*" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="4" Grid.Column="0" FontSize="18" Content="4" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="4" Grid.Column="1" FontSize="18" Content="5" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="4" Grid.Column="2" FontSize="18" Content="6" Margin="3" Click="ButtonNumberClick"/>
-        <Button  Grid.Row="4" Grid.Column="3" FontSize="25" Content="-" Margin="3"/>
+        <Button  Grid.Row="4" Grid.Column="3" FontSize="25" Content="-" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="5" Grid.Column="0" FontSize="18" Content="1" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="5" Grid.Column="1" FontSize="18" Content="2" Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="5" Grid.Column="2" FontSize="18" Content="3" Margin="3" Click="ButtonNumberClick"/>
-        <Button  Grid.Row="5" Grid.Column="3" FontSize="25" Content="+" Margin="3"/>
-        <Button  Grid.Row="6" Grid.Column="0" FontSize="25" Content="." Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="5" Grid.Column="3" FontSize="25" Content="+" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="6" Grid.Column="0" FontSize="25" Content="," Margin="3" Click="ButtonNumberClick"/>
         <Button  Grid.Row="6" Grid.Column="1" FontSize="18" Content="0" Margin="3" Click="ButtonNumberClick"/>
-        <Button  Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" FontSize="30" Content="=" Margin="3"/>
+        <Button  Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" FontSize="30" Content="=" Margin="3" Click="ButtonEqualClick"/>
     </Grid>
 </Window>
