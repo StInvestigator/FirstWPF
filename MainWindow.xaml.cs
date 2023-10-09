@@ -40,7 +40,7 @@ namespace FirstWPF
             {
                 if (TBBottom.Text.Length == 0)
                 {}
-                else if (TBBottom.Text[TBBottom.Text.Length-1] >='0' && TBBottom.Text[TBBottom.Text.Length - 1] <= '9')
+                else if (TBBottom.Text[TBBottom.Text.Length-1] < '0' || TBBottom.Text[TBBottom.Text.Length - 1] > '9')
                 {}
                 else
                 {
@@ -50,6 +50,14 @@ namespace FirstWPF
             }
             TBBottom.Text += (sender as Button).Content;
             isAnsw = false;
+            if (TBBottom.Text.Length > 1 && TBBottom.Text[TBBottom.Text.Length - 2] == '0' && TBBottom.Text[TBBottom.Text.Length - 1] != ',')
+            {}
+            else if(TBBottom.Text.Length > 2 && TBBottom.Text[TBBottom.Text.Length - 3] == '0' && TBBottom.Text[TBBottom.Text.Length - 1] < '0' || TBBottom.Text[TBBottom.Text.Length - 1] > '9')
+            {}
+            else { return; }
+            MessageBox.Show("Wrong input!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            TBBottom.Text = "";
+            return;
         }
 
         private void ButtonBackClick(object sender, RoutedEventArgs e)
@@ -69,9 +77,8 @@ namespace FirstWPF
         }
         private void ButtonEqualClick(object sender, RoutedEventArgs e)
         {
-            if (TBBottom.Text[0]=='0' && TBBottom.Text[1] != ',')
+            if (TBBottom.Text.Length == 1)
             {
-                MessageBox.Show("Wrong input!","Error",MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             List<double> numbers = new List<double>();
