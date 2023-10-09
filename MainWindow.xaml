@@ -5,34 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MinHeight="400" MinWidth="800">
+        Title="MainWindow" Height="450" Width="400" MinHeight="450" MinWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="89*" />
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
         </Grid.RowDefinitions>
-        <WrapPanel>
-            
-        <Button Foreground="Navy" Content="Navy" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="18"/>
-        <Button Foreground="Blue" Content="Blue" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="18"/>
-        <Button Foreground="Aqua" Content="Aqua" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="18"/>
-        <Button Foreground="Teal" Content="Teal" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="18"/>
-        <Button Foreground="Olive" Content="Olive" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="18"/>
-        <Button Foreground="Green" Content="Green" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="18"/>
-        <Button Foreground="Lime" Content="Lime" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="18"/>
-        <Button Foreground="Yellow" Content="Yellow" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="18"/>
-        <Button Foreground="Orange" Content="Orange" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="16"/>
-        <Button Foreground="Red" Content="Red" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="18"/>
-        <Button Foreground="Maroon" Content="Maroon" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="16"/>
-        <Button Foreground="Fuchsia" Content="Fuchsia" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="16"/>
-        <Button Foreground="Purple" Content="Purple" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="18"/>
-        <Button Foreground="Black" Content="Black" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="18"/>
-        <Button Foreground="Silver" Content="Silver" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="18"/>
-        <Button Foreground="Gray" Content="Gray" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="18"/>
-        <Button Foreground="White" Content="White" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 20" FontSize="18"/>
-        </WrapPanel>
+        <TextBox Grid.ColumnSpan="4" FontSize="18" TextAlignment="Right" IsEnabled="False" Name="TBTop"/>
+        <TextBox Grid.Row="1" Grid.ColumnSpan="4" FontSize="40" TextAlignment="Right" IsEnabled="False" Name ="TBBottom"/>
+        <Button  Grid.Row="2" Grid.Column="0" FontSize="18" Content="CE" Margin="3"/>
+        <Button  Grid.Row="2" Grid.Column="1" FontSize="18" Content="C" Margin="3"/>
+        <Button  Grid.Row="2" Grid.Column="2" FontSize="18" Content= "&lt;" Margin="3"/>
+        <Button  Grid.Row="2" Grid.Column="3" FontSize="25" Content="/" Margin="3"/>
+        <Button  Grid.Row="3" Grid.Column="0" FontSize="18" Content="7" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="3" Grid.Column="1" FontSize="18" Content="8" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="3" Grid.Column="2" FontSize="18" Content="9" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="3" Grid.Column="3" FontSize="25" Content="*" Margin="3"/>
+        <Button  Grid.Row="4" Grid.Column="0" FontSize="18" Content="4" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="4" Grid.Column="1" FontSize="18" Content="5" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="4" Grid.Column="2" FontSize="18" Content="6" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="4" Grid.Column="3" FontSize="25" Content="-" Margin="3"/>
+        <Button  Grid.Row="5" Grid.Column="0" FontSize="18" Content="1" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="5" Grid.Column="1" FontSize="18" Content="2" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="5" Grid.Column="2" FontSize="18" Content="3" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="5" Grid.Column="3" FontSize="25" Content="+" Margin="3"/>
+        <Button  Grid.Row="6" Grid.Column="0" FontSize="25" Content="." Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="6" Grid.Column="1" FontSize="18" Content="0" Margin="3" Click="ButtonNumberClick"/>
+        <Button  Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" FontSize="30" Content="=" Margin="3"/>
     </Grid>
 </Window>

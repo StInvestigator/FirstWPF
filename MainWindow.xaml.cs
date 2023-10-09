@@ -24,5 +24,10 @@ namespace FirstWPF
         {
             InitializeComponent();
         }
+
+        private void ButtonNumberClick(object sender, RoutedEventArgs e)
+        {
+            TBBottom.Text += (sender as Button).Content;
+        }
     }
 }
