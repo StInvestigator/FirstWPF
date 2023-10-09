@@ -28,9 +28,25 @@ namespace FirstWPF
 
         private void ButtonNumberClick(object sender, RoutedEventArgs e)
         {
-            if((sender as Button).Content.ToString()[0] >= '0'&& (sender as Button).Content.ToString()[0] <= '9' && isAnsw == true)
+            if ((sender as Button).Content.ToString()[0] >= '0' && (sender as Button).Content.ToString()[0] <= '9' || (sender as Button).Content.ToString()[0] == ',')
             {
-                TBBottom.Text = "";
+                if (isAnsw)
+                {
+                    TBBottom.Text = "";
+                    TBTop.Text = "";
+                }
+            }
+            if((sender as Button).Content.ToString()[0] == ',')
+            {
+                if (TBBottom.Text.Length == 0)
+                {}
+                else if (TBBottom.Text[TBBottom.Text.Length-1] >='0' && TBBottom.Text[TBBottom.Text.Length - 1] <= '9')
+                {}
+                else
+                {
+                    return;
+                }
+                TBBottom.Text += '0';
             }
             TBBottom.Text += (sender as Button).Content;
             isAnsw = false;
@@ -53,7 +69,7 @@ namespace FirstWPF
         }
         private void ButtonEqualClick(object sender, RoutedEventArgs e)
         {
-            if (TBBottom.Text[0]=='0' && TBBottom.Text[1] != '.')
+            if (TBBottom.Text[0]=='0' && TBBottom.Text[1] != ',')
             {
                 MessageBox.Show("Wrong input!","Error",MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
